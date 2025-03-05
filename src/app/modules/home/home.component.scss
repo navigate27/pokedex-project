@@ -1,0 +1,13 @@
+.search-field {
+  margin: 1em 0;
+  input,
+  input:focus-visible {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0.8em;
+    outline: none;
+    font-size: 1rem;
+  }
+}

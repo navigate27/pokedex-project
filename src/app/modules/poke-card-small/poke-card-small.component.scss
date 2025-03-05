@@ -1,0 +1,37 @@
+::ng-deep .poke-card-small.mat-card {
+  cursor: pointer;
+  border-radius: 2px;
+
+  .poke-header {
+    padding-bottom: 1em;
+
+    .mat-chip {
+      font-size: 0.7rem;
+      padding: 0.5em 0.8em;
+      margin: 2px;
+      min-height: 2.5em;
+      min-width: 5em;
+      justify-content: center;
+    }
+
+    .poke-number {
+      text-align: end;
+      color: #464646;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+
+  .poke-title,
+  .poke-details {
+    color: #464646;
+  }
+
+  .poke-title {
+    margin-top: 0.5em;
+  }
+
+  .poke-thumbnail {
+    width: 10em;
+  }
+}

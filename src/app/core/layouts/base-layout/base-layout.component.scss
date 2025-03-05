@@ -1,0 +1,33 @@
+.base-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  .bg-img {
+    flex: 1;
+    background: url("/assets/pokemon-bg.png") no-repeat center center/cover;
+  }
+
+  .clear-bg {
+    flex: 0.9;
+    background-color: white;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    .logo {
+      width: 18em;
+    }
+  }
+
+  .contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+  }
+}

@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.w-full {
+  width: 100%;
+}
+
+input {
+  color: #181818;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem; //to compensate the margin in between "col"
+  margin-right: -0.5rem; //to compensate the margin in between "col"
+}
+
+.col {
+  flex: 1 1 0%;
+  margin: 0 0.5em;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
