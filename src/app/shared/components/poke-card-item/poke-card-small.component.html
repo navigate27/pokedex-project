@@ -1,8 +1,8 @@
-<mat-card class="poke-card-small">
+<mat-card class="poke-card-small" (click)="view($event)">
   <div class="poke-header">
     <div class="row">
       <div class="col">
-        <mat-chip-list aria-label="Fish selection">
+        <mat-chip-list>
           <mat-chip color="primary" selected>Grass</mat-chip>
           <mat-chip color="accent" selected>Poison</mat-chip>
         </mat-chip-list>

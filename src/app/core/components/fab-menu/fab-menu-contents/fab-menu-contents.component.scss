@@ -1,0 +1,73 @@
+.fab-options {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+  height: 7em;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.fab-options {
+  .fab-btn {
+    position: absolute;
+    transition: transform 0.3s cubic-bezier(0.3, 0.8, 0.4, 1.4),
+      opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    width: 5em;
+    height: 5em;
+
+    img {
+      width: 3em;
+    }
+  }
+
+  .btn0 {
+    background-color: #fff;
+    width: 5.5em;
+    height: 5.5em;
+    transform: translate(40px, -22px) rotate(0deg);
+  }
+
+  .btn1 {
+    transform: translate(40px, -22px) rotate(45deg);
+  }
+
+  .btn2 {
+    transform: translate(40px, -22px) rotate(0deg);
+  }
+
+  .btn3 {
+    transform: translate(40px, -22px) rotate(-45deg);
+  }
+
+  //to achieve arc position of sub menu buttons
+  .fab-item-show.btn0 {
+    transform: translate(37px, -24px) rotate(360deg);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .fab-item-show.btn1 {
+    transform: translate(-50px, -75px) rotate(0deg);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .fab-item-show.btn2 {
+    transform: translate(40px, -145px) rotate(360deg);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .fab-item-show.btn3 {
+    transform: translate(125px, -75px) rotate(0deg);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.mat-button-wrapper {
+  display: block !important;
+  line-height: 0 !important;
+}

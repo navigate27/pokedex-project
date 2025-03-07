@@ -1,0 +1,42 @@
+<div class="fab-options">
+  <button
+    mat-fab
+    class="fab-btn btn0"
+    [ngClass]="{ 'fab-item-show': isMenuOpen }"
+    matTooltip="Close"
+    [matTooltipPosition]="'above'"
+    (click)="clickButton(0)"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+  <button
+    mat-fab
+    class="fab-btn btn1"
+    [ngClass]="{ 'fab-item-show': isMenuOpen }"
+    matTooltip="Pokemons"
+    [matTooltipPosition]="'above'"
+    (click)="clickButton(1)"
+  >
+    <img src="assets/pokemon-icon.png" alt="Icon 1" />
+  </button>
+  <button
+    mat-fab
+    class="fab-btn btn2"
+    [ngClass]="{ 'fab-item-show': isMenuOpen }"
+    matTooltip="Items"
+    [matTooltipPosition]="'above'"
+    (click)="clickButton(2)"
+  >
+    <img src="assets/pokeitems-icon.png" alt="Icon 2" />
+  </button>
+  <button
+    mat-fab
+    class="fab-btn btn3"
+    [ngClass]="{ 'fab-item-show': isMenuOpen }"
+    matTooltip="Moves"
+    [matTooltipPosition]="'above'"
+    (click)="clickButton(3)"
+  >
+    <img src="assets/pokemoves-icon.png" alt="Icon 3" />
+  </button>
+</div>

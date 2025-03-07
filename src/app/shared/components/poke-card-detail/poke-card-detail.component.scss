@@ -1,0 +1,56 @@
+.poke-detail-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+
+  .poke-bg {
+    height: 20em;
+    background-color: #4ad740;
+
+    .poke-header {
+      padding: 2em 1.5em;
+      color: #fff;
+      font-weight: bold;
+
+      h4 {
+        font-size: 2rem;
+      }
+
+      h5 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .pokeball-alpha {
+      width: 22em;
+      position: absolute;
+      top: -15px;
+      right: 0px;
+    }
+  }
+
+  .poke-img {
+    width: 19em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5em;
+  }
+
+  .poke-content {
+    flex: 1;
+    background-color: #fff;
+    padding-top: 12%;
+
+    .type {
+      padding-bottom: 2em;
+    }
+
+    .about {
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
