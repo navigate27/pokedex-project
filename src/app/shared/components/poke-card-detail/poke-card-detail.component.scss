@@ -9,12 +9,20 @@
     background-color: #4ad740;
 
     .poke-header {
+      display: flex;
+      justify-content: space-between;
       padding: 2em 1.5em;
       color: #fff;
       font-weight: bold;
 
       h4 {
         font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+        mat-icon {
+          cursor: pointer;
+        }
       }
 
       h5 {
@@ -47,16 +55,117 @@
       padding-bottom: 2em;
     }
 
-    .about-container {
+    .tab-container {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      .about {
-        text-align: center;
-        width: 20em;
-        font-size: 1rem;
-
+      .tab-content {
+        width: 25em;
+        overflow: hidden;
         h3 {
           font-size: 1.5rem;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .bmi {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          padding-bottom: 1em;
+
+          .bmi-item {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            min-height: 5em;
+
+            &.abilties .value {
+              font-size: 1rem;
+            }
+          }
+
+          .bmi-item:nth-child(2) {
+            border-left: solid 1px #ddd;
+            border-right: solid 1px #ddd;
+          }
+
+          .value {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            width: 100%;
+          }
+
+          small {
+            padding-top: 0.5rem;
+            text-transform: capitalize;
+            color: #878787;
+          }
+        }
+
+        .description {
+          text-align: center;
+          font-size: 1rem;
+        }
+
+        .stats {
+          padding-top: 1em;
+
+          .stats-item {
+            display: flex;
+            justify-content: start;
+            width: 100%;
+            height: 2em;
+
+            .label {
+              font-weight: bold;
+              border-right: solid 1px #838383;
+              width: 4em;
+            }
+
+            .label,
+            .value {
+              margin-right: 1em;
+              display: flex;
+              align-items: center;
+            }
+
+            .range {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+          }
+        }
+
+        .evolve {
+          padding-top: 1em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .evolve-item {
+            h6 {
+              text-align: center;
+            }
+
+            img {
+              width: 4em;
+              padding: 0 2em;
+            }
+          }
         }
       }
     }
@@ -70,6 +179,10 @@
 
   .mat-tab-header {
     display: none;
+  }
+
+  .mat-tab-body-content {
+    overflow: hidden;
   }
 
   .tab {

@@ -1,7 +1,7 @@
 <div class="poke-detail-container">
   <div class="poke-bg">
-    <div class="flex justify-between poke-header">
-      <h4>Bulbasaur</h4>
+    <div class="poke-header">
+      <h4>Bulbasaur <mat-icon>volume_up</mat-icon></h4>
       <h5>#001</h5>
     </div>
     <img class="pokeball-alpha" src="/assets/poke-alpha.png" alt="" />
@@ -27,21 +27,93 @@
         (selectedIndexChange)="tabSelect($event)"
       >
         <mat-tab>
-          <div
-            class="about-container flex flex-col justify-center items-center"
-          >
-            <div class="about">
+          <div class="tab-container">
+            <div class="tab-content">
               <h3>About</h3>
 
-              <div class="content">
+              <div class="bmi">
+                <div class="bmi-item">
+                  <div class="value">
+                    <mat-icon>fitness_center</mat-icon>
+                    6.9kg
+                  </div>
+                  <small>weight</small>
+                </div>
+                <div class="bmi-item">
+                  <div class="value">
+                    <mat-icon>format_line_spacing</mat-icon>
+                    0.7m
+                  </div>
+                  <small>height</small>
+                </div>
+                <div class="bmi-item abilties">
+                  <div class="value">Chlorophyll</div>
+                  <div class="value">Overgrow</div>
+                  <small>Abilities</small>
+                </div>
+              </div>
+              <div class="description">
                 A strange seed was planted on its back at birth. the plant
                 sprouts and grows with this pokémon.
               </div>
             </div>
           </div>
         </mat-tab>
-        <mat-tab>Content 2</mat-tab>
-        <mat-tab>Content 3</mat-tab>
+        <mat-tab>
+          <div class="tab-container">
+            <div class="tab-content">
+              <h3>Base Stats</h3>
+
+              <div class="stats">
+                <div class="stats-item">
+                  <div class="label">HP</div>
+                  <div class="value">045</div>
+                  <div class="range">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="40"
+                    ></mat-progress-bar>
+                  </div>
+                </div>
+
+                <div class="stats-item">
+                  <div class="label">ATK</div>
+                  <div class="value">049</div>
+                  <div class="range">
+                    <mat-progress-bar
+                      mode="determinate"
+                      value="80"
+                    ></mat-progress-bar>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>
+          <div class="tab-container">
+            <div class="tab-content">
+              <h3>Evolution</h3>
+
+              <div class="evolve">
+                <div class="evolve-item">
+                  <img src="/assets/bulba-sample.png" alt="" />
+                  <h6>Bulbasaur</h6>
+                </div>
+                <mat-icon>arrow_right_alt</mat-icon>
+                <div class="evolve-item">
+                  <img src="/assets/bulba-sample.png" alt="" />
+                  <h6>Ivysaur</h6>
+                </div>
+                <mat-icon>arrow_right_alt</mat-icon>
+                <div class="evolve-item">
+                  <img src="/assets/bulba-sample.png" alt="" />
+                  <h6>Venosaur</h6>
+                </div>
+              </div>
+            </div>
+          </div></mat-tab
+        >
       </mat-tab-group>
     </div>
   </div>
