@@ -33,6 +33,11 @@ input {
   display: flex;
 }
 
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .justify-between {
   justify-content: space-between;
 }

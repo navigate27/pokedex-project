@@ -15,8 +15,34 @@
       </mat-chip-list>
     </div>
 
-    <div class="flex justify-center about">
-      <h4>About</h4>
+    <div class="dynamic-content">
+      <button class="tab tab-prev" mat-button (click)="tabPrev()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+      <button class="tab tab-next" mat-button (click)="tabNext()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+      <mat-tab-group
+        [selectedIndex]="tabSelected"
+        (selectedIndexChange)="tabSelect($event)"
+      >
+        <mat-tab>
+          <div
+            class="about-container flex flex-col justify-center items-center"
+          >
+            <div class="about">
+              <h3>About</h3>
+
+              <div class="content">
+                A strange seed was planted on its back at birth. the plant
+                sprouts and grows with this pokémon.
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <mat-tab>Content 2</mat-tab>
+        <mat-tab>Content 3</mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </div>

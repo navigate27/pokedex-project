@@ -47,10 +47,44 @@
       padding-bottom: 2em;
     }
 
-    .about {
-      h4 {
-        font-size: 1.5rem;
+    .about-container {
+      width: 100%;
+
+      .about {
+        text-align: center;
+        width: 20em;
+        font-size: 1rem;
+
+        h3 {
+          font-size: 1.5rem;
+        }
       }
+    }
+  }
+}
+
+::ng-deep .dynamic-content {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+
+  .mat-tab-header {
+    display: none;
+  }
+
+  .tab {
+    z-index: 99;
+    position: absolute;
+    height: 15em;
+    min-width: 2em;
+    padding: 0 0.5em;
+
+    &.tab-prev {
+      left: 0px;
+    }
+
+    &.tab-next {
+      right: 0px;
     }
   }
 }

@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatTabsModule } from '@angular/material/tabs';
 import { PokeCardItemComponent } from './components/poke-card-item/poke-card-small.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { PokeCardItemComponent } from './components/poke-card-item/poke-card-sma
     MatChipsModule,
     MatButtonModule,
     MatBottomSheetModule,
+    MatTabsModule,
   ],
   exports: [PokeCardItemComponent],
 })
