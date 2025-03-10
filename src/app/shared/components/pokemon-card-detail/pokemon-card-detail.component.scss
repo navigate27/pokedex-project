@@ -16,11 +16,7 @@
     }
 
     @include respond-h(l) {
-      height: 17em;
-    }
-
-    @include respond-h(l) {
-      height: 16em;
+      height: 14em;
     }
 
     .poke-header {
@@ -67,13 +63,13 @@
     }
 
     @include respond-h(l) {
-      top: 5em;
-      width: 15em;
+      top: 3em;
+      width: 13em;
     }
 
     @include respond-h(m) {
       top: 4em;
-      width: 13em;
+      width: 12em;
     }
   }
 
@@ -83,11 +79,11 @@
     padding-top: 5.5em;
 
     @include respond-h(xl) {
-      padding-top: 3.5em;
+      padding-top: 4em;
     }
 
     @include respond-h(l) {
-      padding-top: 3em;
+      padding-top: 2em;
     }
 
     @include respond-h(m) {
