@@ -32,7 +32,7 @@ export class PokemonService {
    */
   getPokemonList(): Observable<PokemonData[]> {
     return this.http
-      .get<{ results: PokemonBase[] }>(`${this.api}/?limit=10`)
+      .get<{ results: PokemonBase[] }>(`${this.api}/?limit=30`)
       .pipe(
         mergeMap((response) => {
           const pokemonRequests = response.results.map((pokemon) =>

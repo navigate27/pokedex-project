@@ -8,6 +8,11 @@ const routes: Routes = [
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
   {
+    path: 'items',
+    loadChildren: () =>
+      import('./modules/poke-items/poke-items.module').then((m) => m.PokeItemsModule),
+  },
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full',

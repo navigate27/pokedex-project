@@ -26,7 +26,30 @@ input {
 
 .col {
   flex: 1 1 0%;
-  margin: 0 0.5em;
+  margin: 0.5em;
+}
+
+[class^="col-"],
+[class*=" col-"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.col-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-2 {
+  flex: 0 0 16.66%;
+  max-width: 16.66%;
 }
 
 .flex {
@@ -54,4 +77,24 @@ input {
   overflow: hidden;
   padding: 0;
   max-height: 90vh;
+}
+
+.poke-item-card-detail-bs.mat-bottom-sheet-container {
+  overflow: hidden;
+  padding: 0;
+  max-height: 50vh;
+}
+
+.search-field {
+  margin: 1em 0;
+  input,
+  input:focus-visible {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0.8em;
+    outline: none;
+    font-size: 1rem;
+  }
 }

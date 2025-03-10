@@ -1,7 +1,8 @@
-::ng-deep .poke-card-small.mat-card {
+::ng-deep .pokemon-card.mat-card {
   cursor: pointer;
   border-radius: 2px;
-  width: 25em;
+  min-height: 17em;
+  margin: 0.5em;
 
   .poke-header {
     padding-bottom: 1em;

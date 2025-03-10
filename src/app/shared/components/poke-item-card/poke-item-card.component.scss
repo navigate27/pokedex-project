@@ -1,0 +1,23 @@
+::ng-deep .pokemon-card {
+  cursor: pointer;
+  border-radius: 2px;
+  min-height: 14em;
+  margin: 0.5em;
+  min-width: 12em;
+
+  .mat-card-title {
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+
+  .mat-card-content {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 10em;
+    }
+  }
+}

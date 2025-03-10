@@ -1,15 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
-import { PokeCardDetailComponent } from '../poke-card-detail/poke-card-detail.component';
+import { PokemonCardDetailComponent } from '../pokemon-card-detail/pokemon-card-detail.component';
 import { PokemonData } from 'src/app/core/constants/interfaces/pokemon';
 import { UtilsService } from '../../services/utils.service';
 
 @Component({
-  selector: 'poke-card-item',
-  templateUrl: './poke-card-item.component.html',
-  styleUrls: ['./poke-card-item.component.scss'],
+  selector: 'pokemon-card',
+  templateUrl: './pokemon-card.component.html',
+  styleUrls: ['./pokemon-card.component.scss'],
 })
-export class PokeCardItemComponent implements OnInit {
+export class PokemonCardComponent implements OnInit {
   @Input() pokemonData: PokemonData;
   constructor(
     private _bottomSheet: MatBottomSheet,
@@ -32,7 +32,7 @@ export class PokeCardItemComponent implements OnInit {
   ngOnInit(): void {}
 
   view() {
-    this._bottomSheet.open(PokeCardDetailComponent, {
+    this._bottomSheet.open(PokemonCardDetailComponent, {
       panelClass: 'poke-detail-bottom-sheet',
       data: this.pokemonData,
     });

@@ -1,0 +1,10 @@
+<div class="search-field w-full">
+  <input type="search" placeholder="Search items..." />
+</div>
+<div class="card-container">
+  <div class="row">
+    <div class="col-2" *ngFor="let item of pokeItemList">
+      <poke-item-card [pokeItemData]="item"></poke-item-card>
+    </div>
+  </div>
+</div>

@@ -7,10 +7,10 @@ import { PokemonEvolutionService } from 'src/app/core/services/pokemon-evolution
 
 @Component({
   selector: 'app-poke-card-detail',
-  templateUrl: './poke-card-detail.component.html',
-  styleUrls: ['./poke-card-detail.component.scss'],
+  templateUrl: './pokemon-card-detail.component.html',
+  styleUrls: ['./pokemon-card-detail.component.scss'],
 })
-export class PokeCardDetailComponent implements OnInit {
+export class PokemonCardDetailComponent implements OnInit {
   tabSelected = 0;
   pokeEvolutions: any[] = [];
   constructor(

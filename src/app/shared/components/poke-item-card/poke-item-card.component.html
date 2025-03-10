@@ -1,0 +1,9 @@
+<mat-card class="pokemon-card" (click)="view()">
+  <mat-card-title>
+    <div class="item-title">{{ pokeItemData.name }}</div>
+    <div class="item-no">#{{ id }}</div>
+  </mat-card-title>
+  <mat-card-content>
+    <img class="poke-thumbnail" [src]="pokeItemData.image" />
+  </mat-card-content>
+</mat-card>

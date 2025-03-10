@@ -1,5 +1,6 @@
 import { OverlayRef } from '@angular/cdk/overlay';
 import { Component, Inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fab-menu-contents',
@@ -8,7 +9,10 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class FabMenuContentsComponent implements OnInit {
   isMenuOpen = false;
-  constructor(@Inject('overlayRef') private overlayRef: OverlayRef) {}
+  constructor(
+    @Inject('overlayRef') private overlayRef: OverlayRef,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     setTimeout(() => {
@@ -22,6 +26,23 @@ export class FabMenuContentsComponent implements OnInit {
   }
 
   clickButton(button: number) {
+    console.debug(button);
+    if (button == 1) {
+      this.router.navigate(['/home']);
+      this.closeOverlay();
+      return;
+    }
+
+    if (button == 2) {
+      this.router.navigate(['/items']);
+      this.closeOverlay();
+      return;
+    }
+
+    /**
+     * TODO: "Moves" Page
+     */
+
     this.closeOverlay();
   }
 }

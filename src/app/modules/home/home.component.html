@@ -4,8 +4,8 @@
 
 <div class="card-container">
   <div class="row">
-    <div class="col" *ngFor="let pokemon of pokemonList">
-      <poke-card-item [pokemonData]="pokemon"></poke-card-item>
+    <div class="col-4" *ngFor="let pokemon of pokemonList">
+      <pokemon-card [pokemonData]="pokemon"></pokemon-card>
     </div>
   </div>
 </div>

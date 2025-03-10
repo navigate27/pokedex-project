@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PokeCardDetailComponent } from './components/poke-card-detail/poke-card-detail.component';
+import { PokemonCardDetailComponent } from './components/pokemon-card-detail/pokemon-card-detail.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -9,17 +9,21 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatTabsModule } from '@angular/material/tabs';
-import { PokeCardItemComponent } from './components/poke-card-item/poke-card-item.component';
+import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { CarouselTabsComponent } from './components/carousel-tabs/carousel-tabs.component';
 import { CarouselTabContentDirective } from './directives/carousel-tab-content.directive';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PokeItemCardComponent } from './components/poke-item-card/poke-item-card.component';
+import { PokeItemCardDetailComponent } from './components/poke-item-card-detail/poke-item-card-detail.component';
 
 @NgModule({
   declarations: [
-    PokeCardDetailComponent,
-    PokeCardItemComponent,
+    PokemonCardDetailComponent,
+    PokemonCardComponent,
     CarouselTabsComponent,
     CarouselTabContentDirective,
+    PokeItemCardComponent,
+    PokeItemCardDetailComponent,
   ],
   imports: [
     CommonModule,
@@ -33,6 +37,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatTabsModule,
     MatProgressBarModule,
   ],
-  exports: [PokeCardItemComponent, CarouselTabsComponent],
+  exports: [PokemonCardComponent, CarouselTabsComponent, PokeItemCardComponent],
 })
 export class SharedModule {}
