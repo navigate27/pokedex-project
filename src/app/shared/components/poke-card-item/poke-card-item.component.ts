@@ -25,6 +25,7 @@ export class PokeCardItemComponent implements OnInit {
       height: 0,
       abilities: [],
       stats: [],
+      evolution_chain_url: '',
     };
   }
 
@@ -35,6 +36,13 @@ export class PokeCardItemComponent implements OnInit {
       panelClass: 'poke-detail-bottom-sheet',
       data: this.pokemonData,
     });
+  }
+
+  /**
+   * NOTE: For some reason, pokeapi returns unnecessary characters in the description. This function will clean it.
+   */
+  get description(): string {
+    return this.utilService.cleanString(this.pokemonData.flavor_text);
   }
 
   get id(): string {

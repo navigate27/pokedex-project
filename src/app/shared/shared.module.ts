@@ -13,9 +13,6 @@ import { PokeCardItemComponent } from './components/poke-card-item/poke-card-ite
 import { CarouselTabsComponent } from './components/carousel-tabs/carousel-tabs.component';
 import { CarouselTabContentDirective } from './directives/carousel-tab-content.directive';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { PokeTypeColorDirective } from './directives/poke-type-color.directive';
-import { SampleDirectiveDirective } from './directives/sample-directive.directive';
-import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -35,11 +32,7 @@ import { DirectivesModule } from './directives/directives.module';
     MatBottomSheetModule,
     MatTabsModule,
     MatProgressBarModule,
-    DirectivesModule
   ],
-  exports: [
-    PokeCardItemComponent,
-    CarouselTabsComponent,
-  ],
+  exports: [PokeCardItemComponent, CarouselTabsComponent],
 })
 export class SharedModule {}

@@ -16,6 +16,7 @@ export interface PokemonDetails {
 
 export interface PokemonSpeciesDetails {
   flavor_text: string;
+  evolution_chain_url: string;
 }
 
 export interface PokemonBaseStats {

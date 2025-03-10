@@ -18,4 +18,8 @@ export class UtilsService {
   getColorByPokeType(type: string) {
     return PokemonType[this.toTitleCase(type) as keyof typeof PokemonType];
   }
+
+  cleanString(str: string): string {
+    return str.replace(/\s+/g, ' ').trim();
+  }
 }

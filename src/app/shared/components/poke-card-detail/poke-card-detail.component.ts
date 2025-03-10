@@ -3,6 +3,7 @@ import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 import { PokemonData } from 'src/app/core/constants/interfaces/pokemon';
 import { UtilsService } from '../../services/utils.service';
 import { BASE_STATS_ABBR } from 'src/app/core/constants/base-stats-abbr';
+import { PokemonEvolutionService } from 'src/app/core/services/pokemon-evolution.service';
 
 @Component({
   selector: 'app-poke-card-detail',
@@ -11,13 +12,16 @@ import { BASE_STATS_ABBR } from 'src/app/core/constants/base-stats-abbr';
 })
 export class PokeCardDetailComponent implements OnInit {
   tabSelected = 0;
+  pokeEvolutions: any[] = [];
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public pokemonData: PokemonData,
-    private utilService: UtilsService
+    private utilService: UtilsService,
+    private pokemonEvolution: PokemonEvolutionService
   ) {}
 
   ngOnInit(): void {
     console.debug(this.pokemonData);
+    this.getEvolution();
   }
 
   tabPrev() {
@@ -40,6 +44,10 @@ export class PokeCardDetailComponent implements OnInit {
     return this.utilService.paddingNum(this.pokemonData.id);
   }
 
+  get description(): string {
+    return this.utilService.cleanString(this.pokemonData.flavor_text);
+  }
+
   getPokeTypeColor(type: string) {
     return this.utilService.getColorByPokeType(type);
   }
@@ -55,5 +63,13 @@ export class PokeCardDetailComponent implements OnInit {
   getStatAbbr(statName: string) {
     const abbrs = BASE_STATS_ABBR;
     return abbrs.find((x: any) => x.name == statName)?.abbr;
+  }
+
+  async getEvolution() {
+    const evolutions = await this.pokemonEvolution.getEvolutionChain(
+      this.pokemonData.evolution_chain_url
+    );
+
+    this.pokeEvolutions = evolutions;
   }
 }
