@@ -1,3 +1,5 @@
+@import "/src/assets/scss/variables";
+
 ::ng-deep .mat-chip-list {
   .mat-chip {
     font-size: 0.7rem;
@@ -6,6 +8,6 @@
     min-height: 2.5em;
     min-width: 5em;
     justify-content: center;
-    color: #fff;
+    color: $white;
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './modules/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,13 @@ const routes: Routes = [
   {
     path: 'items',
     loadChildren: () =>
-      import('./modules/poke-items/poke-items.module').then((m) => m.PokeItemsModule),
+      import('./modules/poke-items/poke-items.module').then(
+        (m) => m.PokeItemsModule
+      ),
+  },
+  {
+    path: 'error/404',
+    component: NotFoundComponent,
   },
   {
     path: '',

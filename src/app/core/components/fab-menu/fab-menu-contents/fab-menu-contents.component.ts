@@ -26,13 +26,17 @@ export class FabMenuContentsComponent implements OnInit {
   }
 
   clickButton(button: number) {
-    if (button == 1) {
+    /**
+     * TODO: Refactor button handler
+     */
+
+    if (button === 1) {
       this.router.navigate(['/home']);
       this.closeOverlay();
       return;
     }
 
-    if (button == 2) {
+    if (button === 2) {
       this.router.navigate(['/items']);
       this.closeOverlay();
       return;
@@ -41,6 +45,9 @@ export class FabMenuContentsComponent implements OnInit {
     /**
      * TODO: "Moves" Page
      */
+    if (button === 3) {
+      alert('In Progress!');
+    }
 
     this.closeOverlay();
   }

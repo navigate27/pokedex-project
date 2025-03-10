@@ -26,11 +26,11 @@ export class FabMenuComponent implements OnInit {
       .position()
       .global()
       .centerHorizontally()
-      .bottom('10px'); // Position it at the bottom center
+      .bottom('10px');
 
     this.overlayRef = this.overlay.create({
       positionStrategy,
-      hasBackdrop: true, // Add backdrop
+      hasBackdrop: true,
       backdropClass: 'cdk-overlay-dark-backdrop',
     });
 
@@ -44,10 +44,6 @@ export class FabMenuComponent implements OnInit {
       injector
     );
     this.overlayRef.attach(menuPortal);
-
-    // this.overlayRef.backdropClick().subscribe(() => {
-    //   this.closeMenu();
-    // });
   }
 
   closeMenu() {

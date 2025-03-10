@@ -9,7 +9,7 @@
 <div class="card-container">
   <div class="row">
     <div
-      class="col-4"
+      class="pokemon col"
       *ngFor="let pokemon of pokemonList | search : searchValue : 'name'"
     >
       <pokemon-card [pokemonData]="pokemon"></pokemon-card>

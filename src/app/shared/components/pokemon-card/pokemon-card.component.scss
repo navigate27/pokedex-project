@@ -1,3 +1,6 @@
+@import "/src/assets/scss/variables";
+@import "/src/assets/scss/breakpoints";
+
 ::ng-deep .pokemon-card.mat-card {
   cursor: pointer;
   border-radius: 2px;
@@ -9,15 +12,28 @@
 
     .poke-number {
       text-align: end;
-      color: #464646;
+      color: $grey-200;
       font-weight: bold;
       font-size: 1rem;
+
+      @include respond(xl) {
+        flex: 0 0;
+      }
     }
   }
 
   .poke-title,
   .poke-details {
-    color: #464646;
+    color: $grey-200;
+  }
+
+  .poke-details {
+    font-size: 0.8rem;
+
+    @include respond(m) {
+      font-size: 1.5rem;
+      line-height: 1.2em;
+    }
   }
 
   .poke-title {
@@ -26,5 +42,16 @@
 
   .poke-thumbnail {
     width: 10em;
+    @include respond(xl) {
+      width: 8em;
+    }
+
+    @include respond(l) {
+      width: 6em;
+    }
+
+    @include respond(m) {
+      width: 10em;
+    }
   }
 }

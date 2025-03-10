@@ -1,0 +1,34 @@
+/*
+* NOTE: Decided to make it desktop-first design
+*/
+
+$breakpoints: (
+  s: 576px,
+  m: 768px,
+  l: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+  3xl: 1900px,
+);
+
+$h-breakpoints: (
+  m: 500px,
+  l: 700px,
+  xl: 900px,
+);
+
+@mixin respond($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-h($size) {
+  @if map-has-key($h-breakpoints, $size) {
+    @media (max-height: #{map-get($h-breakpoints, $size)}) {
+      @content;
+    }
+  }
+}

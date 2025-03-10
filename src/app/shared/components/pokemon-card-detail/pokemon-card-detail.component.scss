@@ -1,3 +1,6 @@
+@import "/src/assets/scss/variables";
+@import "/src/assets/scss/breakpoints";
+
 .poke-detail-container {
   display: flex;
   flex-direction: column;
@@ -6,13 +9,25 @@
 
   .poke-bg {
     height: 20em;
-    background-color: #4ad740;
+    background-color: $grey-200; //fallback color
+
+    @include respond-h(xl) {
+      height: 20em;
+    }
+
+    @include respond-h(l) {
+      height: 17em;
+    }
+
+    @include respond-h(l) {
+      height: 16em;
+    }
 
     .poke-header {
       display: flex;
       justify-content: space-between;
       padding: 2em 1.5em;
-      color: #fff;
+      color: $white;
       font-weight: bold;
 
       h4 {
@@ -46,12 +61,38 @@
     left: 50%;
     transform: translateX(-50%);
     top: 6em;
+
+    @include respond-h(xl) {
+      width: 18em;
+    }
+
+    @include respond-h(l) {
+      top: 5em;
+      width: 15em;
+    }
+
+    @include respond-h(m) {
+      top: 4em;
+      width: 13em;
+    }
   }
 
   .poke-content {
     flex: 1;
-    background-color: #fff;
+    background-color: $white;
     padding-top: 5.5em;
+
+    @include respond-h(xl) {
+      padding-top: 3.5em;
+    }
+
+    @include respond-h(l) {
+      padding-top: 3em;
+    }
+
+    @include respond-h(m) {
+      padding-top: 2em;
+    }
 
     .type {
       padding-bottom: 0.5em;
@@ -98,8 +139,8 @@
           }
 
           .bmi-item:nth-child(2) {
-            border-left: solid 1px #ddd;
-            border-right: solid 1px #ddd;
+            border-left: solid 1px $grey-500;
+            border-right: solid 1px $grey-500;
           }
 
           .value {
@@ -113,7 +154,7 @@
           small {
             padding-top: 0.5rem;
             text-transform: capitalize;
-            color: #878787;
+            color: $grey-300;
           }
         }
 
@@ -134,7 +175,7 @@
 
             .label {
               font-weight: bold;
-              border-right: solid 1px #838383;
+              border-right: solid 1px $grey-300;
               width: 5em;
               padding-right: 1em;
               justify-content: end;
@@ -183,7 +224,7 @@
   }
 }
 
-::ng-deep .dynamic-content {
+::ng-deep .carousel-tabs {
   margin-top: 1em;
   display: flex;
   justify-content: center;

@@ -1,9 +1,18 @@
+@import "/src/assets/scss/breakpoints";
+
 ::ng-deep .pokemon-card {
   cursor: pointer;
   border-radius: 2px;
   min-height: 14em;
   margin: 0.5em;
-  min-width: 12em;
+
+  @include respond(xxl) {
+    min-width: 8em;
+  }
+
+  @include respond(xl) {
+    min-width: 7em;
+  }
 
   .mat-card-title {
     display: flex;
@@ -11,6 +20,18 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1em;
+
+    .item-no {
+      font-size: 0.6rem;
+    }
+
+    @include respond(xxl) {
+      font-size: 1rem;
+    }
+  
+    @include respond(xl) {
+      font-size: 0.8rem;
+    }
   }
 
   .mat-card-content {
