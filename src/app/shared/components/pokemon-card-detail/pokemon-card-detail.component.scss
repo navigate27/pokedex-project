@@ -135,7 +135,9 @@
             .label {
               font-weight: bold;
               border-right: solid 1px #838383;
-              width: 7em;
+              width: 5em;
+              padding-right: 1em;
+              justify-content: end;
             }
 
             .value {

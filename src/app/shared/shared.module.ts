@@ -21,7 +21,6 @@ import { PokeTypeColorComponent } from './components/poke-type-color/poke-type-c
 
 @NgModule({
   declarations: [
-    PokeTypeColorDirective,
     PokemonCardDetailComponent,
     PokemonCardComponent,
     CarouselTabsComponent,
@@ -29,7 +28,7 @@ import { PokeTypeColorComponent } from './components/poke-type-color/poke-type-c
     PokeItemCardComponent,
     PokeItemCardDetailComponent,
     SearchItemPipe,
-    PokeTypeColorComponent,
+    PokeTypeColorComponent
   ],
   imports: [
     CommonModule,
@@ -44,11 +43,11 @@ import { PokeTypeColorComponent } from './components/poke-type-color/poke-type-c
     MatProgressBarModule,
   ],
   exports: [
-    PokeTypeColorDirective,
+    PokemonCardDetailComponent,
     PokemonCardComponent,
     CarouselTabsComponent,
     PokeItemCardComponent,
-    SearchItemPipe,
+    SearchItemPipe
   ],
 })
 export class SharedModule {}

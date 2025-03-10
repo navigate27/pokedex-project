@@ -1,7 +1,16 @@
 <div class="poke-detail-container">
-  <div class="poke-bg">
+  <!-- TODO: Convert to directive -->
+  <div
+    class="poke-bg"
+    [ngStyle]="{ 'background-color': getPokeTypeColor(pokemonData.types[0]) }"
+  >
     <div class="poke-header">
-      <h4>{{ pokemonData.name | titlecase }} <mat-icon>volume_up</mat-icon></h4>
+      <h4>
+        {{ pokemonData.name | titlecase }}
+
+        <!-- TODO: Add poke sounds -->
+        <!-- <mat-icon>volume_up</mat-icon> -->
+      </h4>
       <h5>#{{ id }}</h5>
     </div>
     <img class="pokeball-alpha" src="/assets/poke-alpha.png" alt="" />
@@ -9,14 +18,7 @@
   <img class="poke-img" [src]="pokemonData.image" alt="" />
   <div class="poke-content">
     <div class="type flex justify-center">
-      <mat-chip-list>
-        <mat-chip
-          *ngFor="let type of pokemonData.types"
-          [ngStyle]="{ 'background-color': getPokeTypeColor(type) }"
-        >
-          {{ type }}
-        </mat-chip>
-      </mat-chip-list>
+      <poke-type-color [types]="pokemonData.types"></poke-type-color>
     </div>
 
     <div class="dynamic-content">
@@ -33,7 +35,9 @@
         <mat-tab>
           <div class="tab-container">
             <div class="tab-content">
-              <h3>About</h3>
+              <h3 [ngStyle]="{ color: getPokeTypeColor(pokemonData.types[0]) }">
+                About
+              </h3>
 
               <div class="bmi">
                 <div class="bmi-item">
@@ -69,11 +73,18 @@
         <mat-tab>
           <div class="tab-container">
             <div class="tab-content">
-              <h3>Base Stats</h3>
+              <h3 [ngStyle]="{ color: getPokeTypeColor(pokemonData.types[0]) }">
+                Base Stats
+              </h3>
 
               <div class="stats">
                 <div *ngFor="let stat of pokemonData.stats" class="stats-item">
-                  <div class="label">
+                  <div
+                    class="label"
+                    [ngStyle]="{
+                      color: getPokeTypeColor(pokemonData.types[0])
+                    }"
+                  >
                     {{ getStatAbbr(stat.name) | uppercase }}
                   </div>
                   <div class="value">{{ getStatValue(stat.stat) }}</div>
@@ -91,7 +102,9 @@
         <mat-tab>
           <div class="tab-container">
             <div class="tab-content">
-              <h3>Evolution</h3>
+              <h3 [ngStyle]="{ color: getPokeTypeColor(pokemonData.types[0]) }">
+                Evolution
+              </h3>
 
               <div class="evolve">
                 <ng-container

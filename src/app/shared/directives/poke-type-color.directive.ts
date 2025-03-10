@@ -2,10 +2,10 @@ import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 import { UtilsService } from '../services/utils.service';
 
 @Directive({
-  selector: '[pokeTypeColor]',
+  selector: '[pokeTypeColor]', // Ensure the selector matches usage
 })
 export class PokeTypeColorDirective implements OnInit {
-  @Input() pokeType!: string;
+  @Input() pokeType: string = '';
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,

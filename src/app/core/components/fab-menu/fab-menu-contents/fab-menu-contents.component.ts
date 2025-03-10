@@ -26,7 +26,6 @@ export class FabMenuContentsComponent implements OnInit {
   }
 
   clickButton(button: number) {
-    console.debug(button);
     if (button == 1) {
       this.router.navigate(['/home']);
       this.closeOverlay();

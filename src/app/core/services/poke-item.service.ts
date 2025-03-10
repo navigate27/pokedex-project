@@ -28,9 +28,9 @@ export class PokeItemService {
    * Get list of pokemon
    * @returns {PokemonItemData[]}
    */
-  getPokemonItemList(): Observable<PokemonItemData[]> {
+  getPokemonItemList(offset: number): Observable<PokemonItemData[]> {
     return this.http
-      .get<{ results: PokemonItemBase[] }>(`${this.api}/?limit=30`)
+      .get<{ results: PokemonItemBase[] }>(`${this.api}/?limit=20&offset=${offset}`)
       .pipe(
         mergeMap((response) => {
           const pokemonRequests = response.results.map((pokemon) =>
