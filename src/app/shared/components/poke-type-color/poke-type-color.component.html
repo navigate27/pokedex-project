@@ -1,0 +1,8 @@
+<mat-chip-list>
+  <mat-chip
+    *ngFor="let type of types"
+    [ngStyle]="{ 'background-color': getPokeTypeColor(type) }"
+  >
+    {{ type }}
+  </mat-chip>
+</mat-chip-list>

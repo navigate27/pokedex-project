@@ -15,15 +15,21 @@ import { CarouselTabContentDirective } from './directives/carousel-tab-content.d
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { PokeItemCardComponent } from './components/poke-item-card/poke-item-card.component';
 import { PokeItemCardDetailComponent } from './components/poke-item-card-detail/poke-item-card-detail.component';
+import { SearchItemPipe } from './pipes/search-item.pipe';
+import { PokeTypeColorDirective } from './directives/poke-type-color.directive';
+import { PokeTypeColorComponent } from './components/poke-type-color/poke-type-color.component';
 
 @NgModule({
   declarations: [
+    PokeTypeColorDirective,
     PokemonCardDetailComponent,
     PokemonCardComponent,
     CarouselTabsComponent,
     CarouselTabContentDirective,
     PokeItemCardComponent,
     PokeItemCardDetailComponent,
+    SearchItemPipe,
+    PokeTypeColorComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +43,12 @@ import { PokeItemCardDetailComponent } from './components/poke-item-card-detail/
     MatTabsModule,
     MatProgressBarModule,
   ],
-  exports: [PokemonCardComponent, CarouselTabsComponent, PokeItemCardComponent],
+  exports: [
+    PokeTypeColorDirective,
+    PokemonCardComponent,
+    CarouselTabsComponent,
+    PokeItemCardComponent,
+    SearchItemPipe,
+  ],
 })
 export class SharedModule {}

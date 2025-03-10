@@ -2,14 +2,7 @@
   <div class="poke-header">
     <div class="row">
       <div class="col">
-        <mat-chip-list>
-          <mat-chip
-            *ngFor="let type of pokemonData.types"
-            [ngStyle]="{ 'background-color': getPokeTypeColor(type) }"
-          >
-            {{ type }}
-          </mat-chip>
-        </mat-chip-list>
+        <poke-type-color [types]="pokemonData.types"></poke-type-color>
       </div>
       <div class="col poke-number">
         <span>#{{ id }}</span>

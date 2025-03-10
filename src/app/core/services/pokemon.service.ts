@@ -30,9 +30,9 @@ export class PokemonService {
    * Get list of pokemon
    * @returns {PokemonData[]}
    */
-  getPokemonList(): Observable<PokemonData[]> {
+  getPokemonList(offset: number): Observable<PokemonData[]> {
     return this.http
-      .get<{ results: PokemonBase[] }>(`${this.api}/?limit=30`)
+      .get<{ results: PokemonBase[] }>(`${this.api}/?limit=10&offset=${offset}`)
       .pipe(
         mergeMap((response) => {
           const pokemonRequests = response.results.map((pokemon) =>

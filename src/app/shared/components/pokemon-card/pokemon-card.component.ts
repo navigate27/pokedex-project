@@ -49,7 +49,4 @@ export class PokemonCardComponent implements OnInit {
     return this.utilService.paddingNum(this.pokemonData.id);
   }
 
-  getPokeTypeColor(type: string) {
-    return this.utilService.getColorByPokeType(type);
-  }
 }
