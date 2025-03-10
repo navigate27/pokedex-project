@@ -4,14 +4,8 @@
 
 <div class="card-container">
   <div class="row">
-    <div class="col">
-      <poke-card-small></poke-card-small>
-    </div>
-    <div class="col">
-      <poke-card-small></poke-card-small>
-    </div>
-    <div class="col">
-      <poke-card-small></poke-card-small>
+    <div class="col" *ngFor="let pokemon of pokemonList">
+      <poke-card-item [pokemonData]="pokemon"></poke-card-item>
     </div>
   </div>
 </div>

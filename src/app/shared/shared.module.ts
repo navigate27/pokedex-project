@@ -9,10 +9,13 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatTabsModule } from '@angular/material/tabs';
-import { PokeCardItemComponent } from './components/poke-card-item/poke-card-small.component';
+import { PokeCardItemComponent } from './components/poke-card-item/poke-card-item.component';
 import { CarouselTabsComponent } from './components/carousel-tabs/carousel-tabs.component';
 import { CarouselTabContentDirective } from './directives/carousel-tab-content.directive';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PokeTypeColorDirective } from './directives/poke-type-color.directive';
+import { SampleDirectiveDirective } from './directives/sample-directive.directive';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatBottomSheetModule,
     MatTabsModule,
     MatProgressBarModule,
+    DirectivesModule
   ],
-  exports: [PokeCardItemComponent, CarouselTabsComponent],
+  exports: [
+    PokeCardItemComponent,
+    CarouselTabsComponent,
+  ],
 })
 export class SharedModule {}

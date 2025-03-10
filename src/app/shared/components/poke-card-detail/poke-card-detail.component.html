@@ -1,17 +1,21 @@
 <div class="poke-detail-container">
   <div class="poke-bg">
     <div class="poke-header">
-      <h4>Bulbasaur <mat-icon>volume_up</mat-icon></h4>
-      <h5>#001</h5>
+      <h4>{{ pokemonData.name | titlecase }} <mat-icon>volume_up</mat-icon></h4>
+      <h5>#{{ id }}</h5>
     </div>
     <img class="pokeball-alpha" src="/assets/poke-alpha.png" alt="" />
   </div>
-  <img class="poke-img" src="/assets/bulba-sample.png" alt="" />
+  <img class="poke-img" [src]="pokemonData.image" alt="" />
   <div class="poke-content">
     <div class="type flex justify-center">
       <mat-chip-list>
-        <mat-chip color="primary" selected>Grass</mat-chip>
-        <mat-chip color="accent" selected>Poison</mat-chip>
+        <mat-chip
+          *ngFor="let type of pokemonData.types"
+          [ngStyle]="{ 'background-color': getPokeTypeColor(type) }"
+        >
+          {{ type }}
+        </mat-chip>
       </mat-chip-list>
     </div>
 
@@ -35,26 +39,29 @@
                 <div class="bmi-item">
                   <div class="value">
                     <mat-icon>fitness_center</mat-icon>
-                    6.9kg
+                    {{ pokemonData.weight / 10 }}kg
                   </div>
                   <small>weight</small>
                 </div>
                 <div class="bmi-item">
                   <div class="value">
                     <mat-icon>format_line_spacing</mat-icon>
-                    0.7m
+                    {{ pokemonData.height / 10 }}m
                   </div>
                   <small>height</small>
                 </div>
                 <div class="bmi-item abilties">
-                  <div class="value">Chlorophyll</div>
-                  <div class="value">Overgrow</div>
+                  <div
+                    *ngFor="let ability of pokemonData.abilities"
+                    class="value"
+                  >
+                    {{ ability | titlecase }}
+                  </div>
                   <small>Abilities</small>
                 </div>
               </div>
               <div class="description">
-                A strange seed was planted on its back at birth. the plant
-                sprouts and grows with this pokémon.
+                {{ pokemonData.flavor_text }}
               </div>
             </div>
           </div>
@@ -65,24 +72,15 @@
               <h3>Base Stats</h3>
 
               <div class="stats">
-                <div class="stats-item">
-                  <div class="label">HP</div>
-                  <div class="value">045</div>
-                  <div class="range">
-                    <mat-progress-bar
-                      mode="determinate"
-                      value="40"
-                    ></mat-progress-bar>
+                <div *ngFor="let stat of pokemonData.stats" class="stats-item">
+                  <div class="label">
+                    {{ getStatAbbr(stat.name) | uppercase }}
                   </div>
-                </div>
-
-                <div class="stats-item">
-                  <div class="label">ATK</div>
-                  <div class="value">049</div>
+                  <div class="value">{{ getStatValue(stat.stat) }}</div>
                   <div class="range">
                     <mat-progress-bar
                       mode="determinate"
-                      value="80"
+                      [value]="getStatValueRange(stat.stat)"
                     ></mat-progress-bar>
                   </div>
                 </div>

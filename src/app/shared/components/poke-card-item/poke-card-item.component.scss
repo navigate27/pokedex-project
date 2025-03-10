@@ -1,6 +1,7 @@
 ::ng-deep .poke-card-small.mat-card {
   cursor: pointer;
   border-radius: 2px;
+  width: 25em;
 
   .poke-header {
     padding-bottom: 1em;
@@ -12,6 +13,7 @@
       min-height: 2.5em;
       min-width: 5em;
       justify-content: center;
+      color: #fff;
     }
 
     .poke-number {

@@ -1,0 +1,32 @@
+<mat-card class="poke-card-small" (click)="view()">
+  <div class="poke-header">
+    <div class="row">
+      <div class="col">
+        <mat-chip-list>
+          <mat-chip
+            *ngFor="let type of pokemonData.types"
+            [ngStyle]="{ 'background-color': getPokeTypeColor(type) }"
+          >
+            {{ type }}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+      <div class="col poke-number">
+        <span>#{{ id }}</span>
+      </div>
+    </div>
+  </div>
+  <mat-card-title>
+    <div class="poke-title">{{ pokemonData.name | titlecase }}</div>
+  </mat-card-title>
+  <mat-card-content>
+    <div class="row">
+      <div class="flex items-center col poke-details">
+        {{ pokemonData.flavor_text }}
+      </div>
+      <div class="col flex justify-center">
+        <img class="poke-thumbnail" [src]="pokemonData.image" alt="" />
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
