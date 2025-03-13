@@ -31,8 +31,8 @@ input {
   &.pokemon {
     @include respond(3xl) {
       margin: 0;
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
+      flex: 0 0 25%;
+      max-width: 25%;
     }
 
     @include respond(xxl) {
@@ -100,7 +100,7 @@ input {
   max-height: 90vh;
 
   @include respond(3xl) {
-    max-height: 85vh;
+    max-height: 78vh;
   }
 
   @include respond(xxl) {
